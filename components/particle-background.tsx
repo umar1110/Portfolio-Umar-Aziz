@@ -22,7 +22,7 @@ export function ParticleBackground() {
     if (!ctx) return;
 
     const particles: Particle[] = [];
-    const particleCount = 50;
+    const particleCount = 300;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;

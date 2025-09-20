@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { links } from '@/constants/Links';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -43,13 +44,13 @@ export function ContactSection() {
         <div className="text-center mb-12">
           <Badge variant="outline" className="mb-4">Get In Touch</Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Let's Work{' '}
+            Let&apos;s Work{' '}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Together
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+            Have a project in mind or want to discuss opportunities? I&apos;d love to hear from you.
           </p>
         </div>
 
@@ -64,7 +65,9 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-muted-foreground">alex.johnson@email.com</p>
+                    <a href={`mailto:${links.email}`} className="text-muted-foreground hover:text-primary transition-colors">
+                      {links.email}
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -73,7 +76,9 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold">Phone</p>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <a href={`tel:${links.phone}`} className="text-muted-foreground hover:text-primary transition-colors">
+                      {links.phone}
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -82,7 +87,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold">Location</p>
-                    <p className="text-muted-foreground">San Francisco, CA (Open to Remote)</p>
+                    <p className="text-muted-foreground">{links.location} (Open to Remote)</p>
                   </div>
                 </div>
               </div>
@@ -91,15 +96,17 @@ export function ContactSection() {
             <div>
               <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
               <div className="flex gap-4">
-                <Button variant="outline" size="icon" className="hover:scale-110 transition-transform">
-                  <Github className="w-5 h-5" />
-                </Button>
-                <Button variant="outline" size="icon" className="hover:scale-110 transition-transform">
-                  <Linkedin className="w-5 h-5" />
-                </Button>
-                <Button variant="outline" size="icon" className="hover:scale-110 transition-transform">
-                  <Twitter className="w-5 h-5" />
-                </Button>
+                <a href={links.github} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="icon" className="hover:scale-110 transition-transform">
+                    <Github className="w-5 h-5" />
+                  </Button>
+                </a>
+                <a href={links.linkedin} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="icon" className="hover:scale-110 transition-transform">
+                    <Linkedin className="w-5 h-5" />
+                  </Button>
+                </a>
+               
               </div>
             </div>
 

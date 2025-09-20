@@ -5,13 +5,14 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
+import Image from 'next/image';
 
 const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Product Manager",
     company: "TechFlow Solutions",
-    content: "Alex is an exceptional developer who consistently delivers high-quality work. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
+    content: "Umar is an exceptional developer who consistently delivers high-quality work. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
     rating: 5,
     image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=150"
   },
@@ -19,7 +20,7 @@ const testimonials = [
     name: "Michael Chen",
     role: "CTO",
     company: "Digital Innovations Inc",
-    content: "Working with Alex was a game-changer for our project. His full-stack expertise and proactive approach helped us launch our platform ahead of schedule with zero critical bugs.",
+    content: "Working with Umar was a game-changer for our project. His full-stack expertise and proactive approach helped us launch our platform ahead of schedule with zero critical bugs.",
     rating: 5,
     image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150"
   },
@@ -27,7 +28,7 @@ const testimonials = [
     name: "Emily Rodriguez",
     role: "Design Lead",
     company: "Creative Studios",
-    content: "Alex has an incredible ability to bring designs to life while maintaining pixel-perfect accuracy. His collaboration skills and technical expertise make him a pleasure to work with.",
+    content: "Umar has an incredible ability to bring designs to life while maintaining pixel-perfect accuracy. His collaboration skills and technical expertise make him a pleasure to work with.",
     rating: 5,
     image: "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=150"
   },
@@ -35,7 +36,7 @@ const testimonials = [
     name: "David Park",
     role: "Founder",
     company: "StartupXYZ",
-    content: "Alex's contribution to our mobile app was invaluable. His React Native expertise and understanding of mobile UX principles helped us achieve a 4.8-star rating on both app stores.",
+    content: "Umar's contribution to our mobile app was invaluable. His React Native expertise and understanding of mobile UX principles helped us achieve a 4.8-star rating on both app stores.",
     rating: 5,
     image: "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=150"
   }
@@ -94,12 +95,14 @@ export function TestimonialsSection() {
                     ))}
                   </div>
                   <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-6">
-                    "{testimonials[currentIndex].content}"
+                    "{testimonials[currentIndex].content}" 
                   </blockquote>
                 </div>
 
                 <div className="flex items-center justify-center gap-4">
-                  <img
+                  <Image
+                    width={64}
+                    height={64}
                     src={testimonials[currentIndex].image}
                     alt={testimonials[currentIndex].name}
                     className="w-16 h-16 rounded-full object-cover"

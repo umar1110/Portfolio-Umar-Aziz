@@ -1,95 +1,271 @@
 "use client";
 
-import { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
+import Icon from '@/components/Icon';
 import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Progress } from '@/components/ui/progress';
+import {
+  siDocker,
+  siExpress,
+  siFigma,
+  siGit,
+  siJavascript,
+  siMongodb,
+  siNextdotjs,
+  siNodedotjs,
+  siNuxt,
+  siPostgresql,
+  siPostman,
+  siReact,
+  siRedis,
+  siRubyonrails,
+  siSocketdotio,
+  siSupabase,
+  siTailwindcss,
+  siTypescript,
+  siVuedotjs,
+  siWebrtc,
+  siPython,
+  siPytorch,
+  siTensorflow,
+  siPandas,
+  siNumpy,
+  siScikitlearn,
+  siJupyter,
+  siAnaconda,
+  siOpencv,
+  siFlask,
+  siDjango,
+  siFastapi,
+  siCelery,
+  siGunicorn,
+  siVercel,
+  siHeroku,
+  siNetlify,
+  siRailway
+} from 'simple-icons/icons';
 
-const skillCategories = {
-  frontend: [
-    { name: 'React', level: 95, icon: '⚛️' },
-    { name: 'Next.js', level: 90, icon: '▲' },
-    { name: 'TypeScript', level: 85, icon: '🔷' },
-    { name: 'Vue.js', level: 80, icon: '💚' },
-    { name: 'Tailwind CSS', level: 95, icon: '🎨' },
-    { name: 'HTML/CSS', level: 98, icon: '🌐' },
-  ],
-  backend: [
-    { name: 'Node.js', level: 90, icon: '🟢' },
-    { name: 'Express', level: 85, icon: '🚂' },
-    { name: '.NET', level: 75, icon: '💜' },
-    { name: 'Django', level: 70, icon: '🐍' },
-    { name: 'Ruby on Rails', level: 65, icon: '💎' },
-    { name: 'PostgreSQL', level: 80, icon: '🐘' },
-  ],
-  mobile: [
-    { name: 'React Native', level: 85, icon: '📱' },
-    { name: 'Flutter', level: 75, icon: '🔵' },
-    { name: 'Expo', level: 80, icon: '⚡' },
-    { name: 'iOS Development', level: 70, icon: '🍎' },
-    { name: 'Android Development', level: 70, icon: '🤖' },
-  ],
-  tools: [
-    { name: 'Git', level: 95, icon: '🔀' },
-    { name: 'Docker', level: 80, icon: '🐳' },
-    { name: 'AWS', level: 75, icon: '☁️' },
-    { name: 'Firebase', level: 85, icon: '🔥' },
-    { name: 'Figma', level: 80, icon: '🎨' },
-    { name: 'Jest', level: 85, icon: '🧪' },
-  ]
-};
+
+const skills = [
+  {
+    name: 'Javascript',
+    icon: siJavascript,
+    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+  },
+  {
+    name: 'Typescript',
+    icon: siTypescript,
+    link: 'https://www.typescriptlang.org/'
+  },
+  {
+    name: 'React',
+    icon: siReact,
+    link: 'https://react.dev/'
+  },
+  {
+    name: 'Vue.js',
+    icon: siVuedotjs,
+    link: 'https://vuejs.org/'
+  },
+  {
+    name: 'Next.js',
+    icon: siNextdotjs,
+    link: 'https://nextjs.org/'
+  },
+  {
+    name: 'Nuxt.js',
+    icon: siNuxt,
+    link: 'https://nuxtjs.org/'
+  },
+  {
+    name: 'Node.js',
+    icon: siNodedotjs,
+    link: 'https://www.nodejs.org/'
+  },
+  {
+    name: 'Express.Js',
+    icon: siExpress,
+    link: 'https://expressjs.com/'
+  },
+  {
+    name:'ROR',
+    icon: siRubyonrails,
+    link: 'https://rubyonrails.org/'
+  },
+  {
+    name: 'Socket.io',
+    icon: siSocketdotio,
+    link: 'https://socket.io/'
+  },
+  {
+    name :"WebRTC",
+    icon: siWebrtc,
+    link: 'https://webrtc.org/'
+  },
+  {
+    name :"Action Cable",
+    icon: siRubyonrails,
+    link: 'https://guides.rubyonrails.org/action_cable_overview.html'
+  },
+  {
+    name: 'PostgreSQL',
+    icon: siPostgresql,
+    link: 'https://www.postgresql.org/'
+  },
+  {
+    name: 'MongoDB',
+    icon: siMongodb,
+    link: 'https://www.mongodb.com/'
+  },
+  {
+    name: 'Supabase',
+    icon: siSupabase,
+    link: 'https://supabase.com/'
+  },
+
+  {
+    name: 'Redis',
+    icon: siRedis,
+    link: 'https://redis.io/'
+  },
+  
+  {
+    name: 'Tailwindcss',
+    icon: siTailwindcss,
+    link: 'https://tailwindcss.com/'
+  },
+  {
+    name: 'Figma',
+    icon: siFigma,
+    link: 'https://www.figma.com/'
+  },
+ 
+  {
+    name: 'Postman',
+    icon: siPostman,
+    link: 'https://www.postman.com/'
+  },
+  {
+    name: 'Docker',
+    icon: siDocker,
+    link: 'https://www.docker.com/'
+  },
+  {
+    name: 'Git',
+    icon: siGit,
+    link: 'https://git-scm.com/'
+  },
+   
+];
+
+const secondarySkills = [
+  {
+    name: 'Python',
+    icon: siPython,
+    link: 'https://www.python.org/'
+  },
+  {
+    name: 'Machine Learning',
+    icon: siPytorch,
+    link: 'https://pytorch.org/'
+  },
+  
+  {
+    name: 'Jupyter',
+    icon: siJupyter,
+    link: 'https://jupyter.org/'
+  },
+ 
+  {
+    name: 'Django',
+    icon: siDjango,
+    link: 'https://www.djangoproject.com/'
+  },
+  {
+    name: 'FastAPI',
+    icon: siFastapi,
+    link: 'https://fastapi.tiangolo.com/'
+  },
+ 
+  {
+    name: 'Vercel',
+    icon: siVercel,
+    link: 'https://vercel.com/'
+  },
+  {
+    name: 'Railway',
+    icon: siRailway,
+    link: 'https://www.railway.app/'
+  },
+  {
+    name: 'Netlify',
+    icon: siNetlify,
+    link: 'https://www.netlify.com/'
+  }
+];
 
 export function SkillsSection() {
-  const [activeTab, setActiveTab] = useState('frontend');
-
   return (
-    <section id="skills" className="py-20 px-4 bg-muted/30">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <Badge variant="outline" className="mb-4">Skills & Expertise</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Technologies I{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Master
-            </span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern, scalable applications across all platforms
+    <section id="skills" className="w-full bg-muted/30 py-16 md:py-20 2xl:py-24">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 md:gap-12 md:px-8">
+        <div className="flex flex-col items-center gap-4">
+          <div className="self-center">
+            <Badge variant="outline" className="px-5 py-1">
+              <p className="text-sm font-medium">Skills</p>
+            </Badge>
+          </div>
+          <p className="text-lg md:text-xl max-w-xl text-center text-muted-foreground">
+            The skills, tools and technologies I am really good at:
           </p>
         </div>
+        
+        {/* Main Skills */}
+        <div className="flex flex-col gap-8">
+          <div>
+            <h3 className="text-lg font-semibold text-center mb-6 text-primary">Core Technologies</h3>
+            <div className="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
+              {skills.map((skill, index) => (
+                <div key={index} className="flex flex-col items-center gap-2">
+                  <a 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    href={skill.link}
+                    className="transition-transform duration-300 md:hover:scale-110"
+                  >
+                    <Icon 
+                      icon={skill.icon} 
+                      size={64} 
+                      className="w-16 h-16"
+                    />
+                  </a>
+                  <p className="text-base md:text-lg text-center">{skill.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-8">
-            <TabsTrigger value="frontend">Frontend</TabsTrigger>
-            <TabsTrigger value="backend">Backend</TabsTrigger>
-            <TabsTrigger value="mobile">Mobile</TabsTrigger>
-            <TabsTrigger value="tools">Tools</TabsTrigger>
-          </TabsList>
-
-          {Object.entries(skillCategories).map(([category, skills]) => (
-            <TabsContent key={category} value={category}>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {skills.map((skill, index) => (
-                  <Card key={skill.name} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="text-2xl group-hover:scale-110 transition-transform">
-                          {skill.icon}
-                        </span>
-                        <div className="flex-1">
-                          <h3 className="font-semibold">{skill.name}</h3>
-                          <p className="text-sm text-muted-foreground">{skill.level}% Proficiency</p>
-                        </div>
-                      </div>
-                      <Progress value={skill.level} className="h-2" />
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-          ))}
-        </Tabs>
+          {/* Secondary Skills */}
+          <div>
+            <h3 className="text-lg font-semibold text-center mb-6 text-primary">Additional Skills</h3>
+            <div className="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
+              {secondarySkills.map((skill, index) => (
+                <div key={index} className="flex flex-col items-center gap-2">
+                  <a 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    href={skill.link}
+                    className="transition-transform duration-300 md:hover:scale-110"
+                  >
+                    <Icon 
+                      icon={skill.icon} 
+                      size={64} 
+                      className="w-16 h-16"
+                    />
+                  </a>
+                  <p className="text-base md:text-lg text-center">{skill.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

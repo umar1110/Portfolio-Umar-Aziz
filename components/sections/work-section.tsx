@@ -5,6 +5,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
+import { links } from '@/constants/Links';
+import Image from 'next/image';
 
 const projects = [
   {
@@ -14,7 +16,7 @@ const projects = [
     image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
     technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: links.github,
     featured: true
   },
   {
@@ -24,7 +26,7 @@ const projects = [
     image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
     technologies: ["React Native", "Node.js", "Socket.io", "MongoDB"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: links.github,
     featured: true
   },
   {
@@ -34,7 +36,7 @@ const projects = [
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
     technologies: ["React", "D3.js", "Express", "Redis", "AWS"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: links.github,
     featured: false
   },
   {
@@ -44,7 +46,7 @@ const projects = [
     image: "https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&w=800",
     technologies: ["Vue.js", "Django", "WebSocket", "PostgreSQL"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: links.github,
     featured: false
   },
   {
@@ -54,7 +56,7 @@ const projects = [
     image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
     technologies: ["Next.js", "Prisma", "AWS S3", "Stripe", "TypeScript"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: links.github,
     featured: false
   },
   {
@@ -64,7 +66,7 @@ const projects = [
     image: "https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=800",
     technologies: ["Flutter", "Firebase", "Node.js", "MongoDB"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: links.github,
     featured: false
   }
 ];
@@ -121,7 +123,9 @@ export function WorkSection() {
               onMouseLeave={() => setHoveredProject(null)}
             >
               <div className="relative overflow-hidden">
-                <img
+                <Image
+                  width={384}
+                  height={384}
                   src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"

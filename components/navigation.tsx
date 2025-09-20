@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import { Moon, Sun, Menu, X, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { links } from '@/constants/Links';
 
 const navItems = [
   { name: 'Home', href: '#hero' },
@@ -76,15 +77,22 @@ export function Navigation() {
           <Button
             variant="outline"
             size="sm"
-            className="hidden sm:flex items-center gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="hidden sm:flex items-center gap-2 hover:bg-primary hover:text-white transition-colors"
             onClick={() => {
-              // Create a temporary link to download the CV
-              const link = document.createElement('a');
-              link.href = '/cv/Alex-Johnson-CV.pdf'; // You'll need to add your actual CV file
-              link.download = 'Alex-Johnson-CV.pdf';
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
+              try {
+                const link = document.createElement('a');
+                link.href = links.cv;
+                link.download = 'Umar-Aziz-CV.pdf';
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              } catch (error) {
+                console.error('Error downloading CV:', error);
+                // Fallback: Open in new tab
+                window.open(links.cv, '_blank');
+              }
             }}
           >
             <Download className="h-4 w-4" />
@@ -121,13 +129,22 @@ export function Navigation() {
               size="sm"
               className="w-full justify-start gap-2 mb-4"
               onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/cv/Alex-Johnson-CV.pdf';
-                link.download = 'Alex-Johnson-CV.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                setIsMenuOpen(false);
+                try {
+                  const link = document.createElement('a');
+                  link.href = links.cv;
+                  link.download = 'Umar-Aziz-CV.pdf';
+                  link.target = '_blank';
+                  link.rel = 'noopener noreferrer';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  setIsMenuOpen(false);
+                } catch (error) {
+                  console.error('Error downloading CV:', error);
+                  // Fallback: Open in new tab
+                  window.open(links.cv, '_blank');
+                  setIsMenuOpen(false);
+                }
               }}
             >
               <Download className="h-4 w-4" />
