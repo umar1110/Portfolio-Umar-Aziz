@@ -12,18 +12,18 @@ const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution built with Next.js, Stripe payments, and real-time inventory management.",
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind"],
-    liveUrl: "#",
+    description: "A full-stack e-commerce solution built with React, Node.js, Express.js , MongoDB and real-time inventory management.",
+    image: "/images/projects/e-commerce.png",
+    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind"],
+    liveUrl: "https://www.sheikhsons.store/",
     githubUrl: links.github,
     featured: true
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Mobile-first task management application with real-time collaboration and offline support.",
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Multi-Tenant Platform ",
+    description: "Multi-Tenant Employee Management & Task Automation Platform where i worked as Next.js Developer.",
+    image: "/images/projects/falcore.png",
     technologies: ["React Native", "Node.js", "Socket.io", "MongoDB"],
     liveUrl: "#",
     githubUrl: links.github,
@@ -31,13 +31,13 @@ const projects = [
   },
   {
     id: 3,
-    title: "Analytics Dashboard",
-    description: "Real-time analytics dashboard with interactive charts and data visualization for business insights.",
-    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "D3.js", "Express", "Redis", "AWS"],
+    title: "Internatial multi language business site",
+    description: "Internatial multi language business site build with MERN Stack with i18n and multi language support.Has support of Dashboard and Admin Panel.",
+    image: "/images/projects/zafar-azfar.png",
+    technologies: ["MongoDB", "Express", "Node.js", "React", "Vercel"],
     liveUrl: "#",
     githubUrl: links.github,
-    featured: false
+    featured: true
   },
   {
     id: 4,
@@ -96,9 +96,10 @@ export function WorkSection() {
             A showcase of my recent work, demonstrating expertise across different technologies and industries
           </p>
           
-          <div className="flex justify-center gap-2 mb-8">
+          <div className="flex text-white justify-center gap-2 mb-8">
             <Button 
               variant={filter === 'all' ? 'default' : 'outline'}
+              className="text-white"
               onClick={() => setFilter('all')}
               size="sm"
             >
@@ -107,6 +108,7 @@ export function WorkSection() {
             <Button 
               variant={filter === 'featured' ? 'default' : 'outline'}
               onClick={() => setFilter('featured')}
+              className="text-white"
               size="sm"
             >
               Featured
@@ -137,10 +139,7 @@ export function WorkSection() {
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
                   </Button>
-                  <Button size="sm" variant="outline">
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
+                
                 </div>
               </div>
               

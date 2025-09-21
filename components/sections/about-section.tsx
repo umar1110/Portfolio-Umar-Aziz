@@ -1,8 +1,8 @@
 "use client";
 
-import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Code, Smartphone, Server, Palette } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Brain, Code, Laptop, Server } from 'lucide-react';
 import Image from 'next/image';
 
 const highlights = [
@@ -17,14 +17,14 @@ const highlights = [
     description: "Node.js, Express, React.js, Next.js, and TypeScript expertise"
   },
   {
-    icon: Smartphone,
+    icon: Laptop,
     title: "Student Developer",
     description: "Pursuing Bachelor's in Computer Science with active learning"
   },
   {
-    icon: Palette,
-    title: "Creative Coder",
-    description: "Tailwind CSS, Bootstrap, and CSS for beautiful user interfaces"
+    icon: Brain,
+    title: "Quick Learner",
+    description: "Always eager to learn new technologies and frameworks"
   }
 ];
 

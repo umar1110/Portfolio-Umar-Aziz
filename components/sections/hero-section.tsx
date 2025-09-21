@@ -37,7 +37,7 @@ export function HeroSection() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const [visibleElements, setVisibleElements] = useState<string[]>([]);
+  const [visibleElements, setVisibleElements] = useState<string[]>(["React","Node.js","Nuxt.js","Next.js","Express.js","MongoDB"]);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
