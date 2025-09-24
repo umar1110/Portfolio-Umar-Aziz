@@ -25,7 +25,7 @@ const projects = [
     description: "Multi-Tenant Employee Management & Task Automation Platform where i worked as Next.js Developer.",
     image: "/images/projects/falcore.png",
     technologies: ["React Native", "Node.js", "Socket.io", "MongoDB"],
-    liveUrl: "https://umar.falcore.uk/",
+    liveUrl: "https://falcore.uk/",
     githubUrl: links.github,
     featured: true
   },
