@@ -8,7 +8,7 @@ const experiences = [
   {
     title: "Associate Software Engineer",
     company: "Stack360",
-    location: "Remote",
+    location: "Hybrid",
     period: "Jul 2025 - Present",
     description: "Contributing to a multi-tenant platform Falcore.uk, building responsive UI and features primarily with Next.js and handling minor backend tasks in Python/Django. Deployed and managed the application on AWS using PM2.",
     technologies: ["Next.js", "Node.js", "Express.js", "MongoDB", "PostgreSQL","ROR", "Docker", "PM2"],
@@ -21,7 +21,7 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company: "Magma3c",
-    location: "Remote",
+    location: "Onsite",
     period: "Sep 2024 - Jan 2025",
     description: "Developed and maintained a Learning Management System (LMS) and a multi-vendor e-commerce platform using Next.js (frontend) and Node.js/Express (backend). Implemented data-scraping utilities in Python to automate content collection.",
     technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Python", "PostgreSQL"],
