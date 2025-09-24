@@ -126,11 +126,15 @@ export function WorkSection() {
                 <div className={`absolute inset-0 bg-black/80 flex items-center justify-center gap-4 transition-opacity duration-300 ${
                   hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
                 }`}>
-                  <Button size="sm" variant="secondary">
+                  <Button 
+                    size="sm" 
+                    variant="secondary"
+                    onClick={() => window.open(project.liveUrl, '_blank')}
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
                   </Button>
-                
+                  
                 </div>
               </div>
               
