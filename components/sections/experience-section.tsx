@@ -6,42 +6,42 @@ import { CalendarDays, MapPin } from 'lucide-react';
 
 const experiences = [
   {
-    title: "Senior Full-Stack Developer",
-    company: "TechFlow Solutions",
-    location: "San Francisco, CA (Remote)",
-    period: "2022 - Present",
-    description: "Leading a team of 5 developers in building scalable web applications. Architected and implemented microservices using Node.js and React, resulting in 40% improved performance.",
-    technologies: ["React", "Node.js", "AWS", "Docker", "TypeScript"],
+    title: "Associate Software Engineer",
+    company: "Stack360",
+    location: "Remote",
+    period: "Jul 2025 - Present",
+    description: "Contributing to a multi-tenant platform Falcore.uk, building responsive UI and features primarily with Next.js and handling minor backend tasks in Python/Django. Deployed and managed the application on AWS using PM2.",
+    technologies: ["Next.js", "Node.js", "Express.js", "MongoDB", "PostgreSQL","ROR", "Docker", "PM2"],
     achievements: [
-      "Increased application performance by 40%",
-      "Led migration to microservices architecture",
-      "Mentored junior developers and conducted code reviews"
+      "Built responsive UI components for multi-tenant platform",
+      "Handled backend tasks in Python/Django",
+      "Deployed and managed applications on AWS infrastructure"
     ]
   },
   {
-    title: "Full-Stack Developer",
-    company: "Digital Innovations Inc",
-    location: "New York, NY",
-    period: "2020 - 2022",
-    description: "Developed and maintained multiple client projects using React, Vue.js, and Node.js. Collaborated with design teams to create pixel-perfect user interfaces.",
-    technologies: ["Vue.js", "React", "Express", "PostgreSQL", "Redux"],
+    title: "Full Stack Developer",
+    company: "Magma3c",
+    location: "Remote",
+    period: "Sep 2024 - Jan 2025",
+    description: "Developed and maintained a Learning Management System (LMS) and a multi-vendor e-commerce platform using Next.js (frontend) and Node.js/Express (backend). Implemented data-scraping utilities in Python to automate content collection.",
+    technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Python", "PostgreSQL"],
     achievements: [
-      "Delivered 15+ client projects on time",
-      "Improved code quality with automated testing",
-      "Reduced bug reports by 60% through rigorous testing"
+      "Developed complete LMS and multi-vendor e-commerce platform",
+      "Implemented Python data-scraping utilities for workflow automation",
+      "Led and mentored team of trainees with code reviews"
     ]
   },
   {
-    title: "Frontend Developer",
-    company: "StartupXYZ",
-    location: "Austin, TX",
-    period: "2019 - 2020",
-    description: "Built responsive web applications and mobile apps using React and React Native. Worked closely with product managers to implement user-centric features.",
-    technologies: ["React", "React Native", "Redux", "Sass", "Jest"],
+    title: "Freelance Full-Stack Developer",
+    company: "Upwork + Fiverr",
+    location: "Remote",
+    period: "2023 - Present",
+    description: "Delivered multiple MERN stack web applications, handling complete end-to-end development. Built Vue.js and Nuxt.js projects with additional backend experience in Ruby on Rails and Django.",
+    technologies: ["React", "Vue.js", "Nuxt.js","Next.js", "Node.js", "Express", "MongoDB","PostgreSQL", "Ruby on Rails", "Django" ],
     achievements: [
-      "Launched mobile app with 50K+ downloads",
-      "Implemented responsive design system",
-      "Achieved 98% cross-browser compatibility"
+      "Delivered multiple complete MERN stack applications",
+      "Built Vue.js and Nuxt.js projects for various clients",
+      "Gained expertise in Ruby on Rails and Django backend development"
     ]
   }
 ];
@@ -59,7 +59,7 @@ export function ExperienceSection() {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A timeline of my professional growth and the impact I've made at each organization
+            A timeline of my professional growth and the impact I&apos;ve made at each organization
           </p>
         </div>
 

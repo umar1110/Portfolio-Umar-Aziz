@@ -25,7 +25,7 @@ const projects = [
     description: "Multi-Tenant Employee Management & Task Automation Platform where i worked as Next.js Developer.",
     image: "/images/projects/falcore.png",
     technologies: ["React Native", "Node.js", "Socket.io", "MongoDB"],
-    liveUrl: "#",
+    liveUrl: "https://umar.falcore.uk/",
     githubUrl: links.github,
     featured: true
   },
@@ -35,40 +35,31 @@ const projects = [
     description: "Internatial multi language business site build with MERN Stack with i18n and multi language support.Has support of Dashboard and Admin Panel.",
     image: "/images/projects/zafar-azfar.png",
     technologies: ["MongoDB", "Express", "Node.js", "React", "Vercel"],
-    liveUrl: "#",
+    liveUrl: "https://www.zafarazfar.com/",
     githubUrl: links.github,
     featured: true
   },
   {
     id: 4,
-    title: "Social Media Platform",
-    description: "Full-featured social media platform with real-time messaging, content sharing, and user engagement.",
-    image: "https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Vue.js", "Django", "WebSocket", "PostgreSQL"],
-    liveUrl: "#",
+    title: "AQI Predictor ",
+    description: "AQI Predictor is a web application that predicts the Air Quality Index (AQI) by using the data user enters.",
+    image: "/images/projects/aqi-predictor.png",
+    technologies: ["React.Js", "Flask","Python","Scikit-learn","Jupyter Notebook"],
+    liveUrl: "https://air-quality-predictor-beta.vercel.app/",
     githubUrl: links.github,
-    featured: false
+    featured: true
   },
   {
     id: 5,
     title: "Learning Management System",
     description: "Comprehensive LMS with video streaming, progress tracking, and interactive course content.",
-    image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/images/projects/LMS.png",
     technologies: ["Next.js", "Prisma", "AWS S3", "Stripe", "TypeScript"],
-    liveUrl: "#",
+    liveUrl: "https://type-script-lms-mern-hmv9.vercel.app/",
     githubUrl: links.github,
-    featured: false
+    featured: true
   },
-  {
-    id: 6,
-    title: "Fitness Tracking App",
-    description: "Cross-platform fitness app with workout tracking, nutrition logging, and social features.",
-    image: "https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Flutter", "Firebase", "Node.js", "MongoDB"],
-    liveUrl: "#",
-    githubUrl: links.github,
-    featured: false
-  }
+  
 ];
 
 export function WorkSection() {
